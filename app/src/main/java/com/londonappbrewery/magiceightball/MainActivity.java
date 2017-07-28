@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
         ballArray.add(R.drawable.ball4);
         ballArray.add(R.drawable.ball5);
 
-        Button myButton = (Button)findViewById(R.id.askButton);
+        final Button myButton = (Button)findViewById(R.id.askButton);
 
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Random randomNumberGenerator = new Random();
-               final int number = randomNumberGenerator.nextInt(5);
+                final int number = randomNumberGenerator.nextInt(5);
 
                 ballDisplay.setImageResource(ballArray.get(number));
             }
